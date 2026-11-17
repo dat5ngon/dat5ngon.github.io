@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dat5ngon -- Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: #0a0a0f;
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem 2rem;
+        }
+
+        header h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            color: #888;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            font-weight: 300;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            width: 100%;
+            padding: 1rem 1.5rem 3rem;
+        }
+
+        .card {
+            background: #16161e;
+            border: 1px solid #2a2a35;
+            border-radius: 12px;
+            padding: 1.8rem;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, border-color 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: #4a9eff;
+            box-shadow: 0 8px 30px rgba(74, 158, 255, 0.1);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .card h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+
+        .card p {
+            color: #999;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+
+        .card .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.4rem;
+        }
+
+        .tag {
+            background: #1e1e2a;
+            color: #6a9fd8;
+            font-size: 0.72rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-weight: 400;
+        }
+
+        footer {
+            padding: 2rem 1rem;
+            text-align: center;
+            color: #555;
+            font-size: 0.8rem;
+        }
+
+        footer a {
+            color: #6a9fd8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 680px) {
+            .projects {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>dat5ngon</h1>
+        <p>Personal projects -- all vanilla HTML/CSS/JS, no build tools</p>
+    </header>
+
+    <div class="projects">
+        <a class="card" href="https://dat5ngon.github.io/archive-digger/">
+            <div class="card-icon">&#x2756;</div>
+            <h2>Archive Digger</h2>
+            <p>Explore the Internet Archive -- search, browse, and view books, videos, images, software, and audio with built-in viewers.</p>
+            <div class="tags">
+                <span class="tag">Internet Archive</span>
+                <span class="tag">Media Viewer</span>
+                <span class="tag">Collections</span>
+            </div>
+        </a>
+
+        <a class="card" href="https://dat5ngon.github.io/music-player/">
+            <div class="card-icon">&#x266B;</div>
+            <h2>Free Music Player</h2>
+            <p>Stream full-length free music from the Internet Archive. Create playlists, download for offline playback, sync to Google Drive.</p>
+            <div class="tags">
+                <span class="tag">Music</span>
+                <span class="tag">Offline</span>
+                <span class="tag">Playlists</span>
+            </div>
+        </a>
+
+        <a class="card" href="https://dat5ngon.github.io/youtube-player/">
+            <div class="card-icon">&#x25B6;</div>
+            <h2>YouTube Player</h2>
+            <p>Search and play YouTube videos via Invidious API. Manage playlists with Google Drive backup. No API key needed.</p>
+            <div class="tags">
+                <span class="tag">YouTube</span>
+                <span class="tag">Invidious</span>
+                <span class="tag">Playlists</span>
+            </div>
+        </a>
+
+        <a class="card" href="https://dat5ngon.github.io/password-manager/">
+            <div class="card-icon">&#x1F512;</div>
+            <h2>Password Manager</h2>
+            <p>Client-side encrypted vault with AES-256-GCM, password generator, policy enforcement, and Google Drive sync. Nothing leaves your browser.</p>
+            <div class="tags">
+                <span class="tag">Encryption</span>
+                <span class="tag">AES-256</span>
+                <span class="tag">Zero-server</span>
+            </div>
+        </a>
+
+        <a class="card" href="https://dat5ngon.github.io/safe-place/">
+            <div class="card-icon">&#x1F4C1;</div>
+            <h2>Safe Place</h2>
+            <p>Personal file storage on Google Drive. Upload, browse, and download files. Also serves as a storage API for other apps.</p>
+            <div class="tags">
+                <span class="tag">Google Drive</span>
+                <span class="tag">Storage API</span>
+                <span class="tag">File Manager</span>
+            </div>
+        </a>
+    </div>
+
+    <footer>
+        <a href="https://github.com/dat5ngon">github.com/dat5ngon</a>
+    </footer>
+</body>
+</html>
