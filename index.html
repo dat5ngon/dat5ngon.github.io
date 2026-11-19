@@ -60,6 +60,18 @@
             font-weight: 300;
         }
 
+        .android-link {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .android-link:hover {
+            color: #fff;
+            border-color: #fff;
+        }
+
         .projects {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -244,7 +256,7 @@
             </svg>
             <h1>DATCRAFT</h1>
         </div>
-        <p>Lightweight browser apps – zero tracking</p>
+        <p>Lightweight browser apps – now available on <a href="datcraft.apk" class="android-link" download>android <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a></p>
     </header>
 
     <div class="projects">
